@@ -1,6 +1,11 @@
 
 function sum(fromN, toN) {
-  // Sum all the values from fromN up to toN
+  let result = fromN
+  if (fromN === toN) {
+    return result
+  } else {
+    return result + sum(result + 1, toN)
+  }
 }
-
+console.log(sum(3,7));
 module.exports = sum;
